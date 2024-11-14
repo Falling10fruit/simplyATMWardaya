@@ -2,72 +2,109 @@
     position: fixed;
     width: 100%;
     height: 10%;
+    background-color: var(--backgroundColor);
+    color: var(--color);
 
     display: flex;
-}
-
-#centerDiv {
-    height: 100%;
-    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 #iconDiv {
-    max-height: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #iconDiv img {
-    height: 100%;
-    object-fit: cover;
+    height: 80%;
+    aspect-ratio: 1/1;
+    object-fit: scale-down;
 }
 
 #titleDiv {
-    height: 100%;
     width: fit-content;
-    padding: 2vh;
     font-size: 5vh;
+}
+
+#buttonButNotButtonSoIDontNeedToRestartAllStyling {
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1/1;
+    top: 0px;
+    right: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonButNotButtonSoIDontNeedToRestartAllStyling img {
+    height: 50%;
+    aspect-ratio: 1/1;
+    object-fit: scale-down;
 }
 
 /* responsive section, initially in mobile then converted to deskop */
 
 .deskopOnly {
     visibility: hidden;
+    position: fixed;
 }
 
 .mobileOnly {
     visibility: visible;
+    position: relative;
 }
 
-.dropdownNav {
+#optionsNav {
     position: absolute;
     right: 0px;
     top: 100%;
     height: 200%;
-    justify-self: flex-end;
-
-    display: flex;
+    visibility: hidden;
 }
 
 .optionSection {
     height: 50%;
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 15px;
+}
+
+.optionIcon {
+    height: 100%;
+}
+
+.optionIcon img {
+    height: 80%;
+    aspect-ratio: 1/1;
+    object-fit: scale-down;
 }
 
 @media only screen and (min-width: 992px) {
     .deskopOnly {
         visibility: visible;
+        position: relative;
     }
 
     .mobileOnly {
-        visibility: visible;
+        visibility: hidden;
+        position: fixed;
     }
 
-    .dropdownNav {
-        position: relative;
+    #optionsNav {
+        position: absolute;
+        top: 0px;
+        right: 15px;
         height: 100%;
+        visibility: visible;
 
         display: flex;
+        gap: 15px;
     }
 
     .optionSection {
