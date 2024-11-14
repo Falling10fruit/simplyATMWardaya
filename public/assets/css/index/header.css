@@ -1,0 +1,77 @@
+#headerDiv {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+}
+
+#centerDiv {
+    height: 100%;
+    justify-self: center;
+}
+
+#iconDiv {
+    max-height: 100%;
+}
+
+#iconDiv img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#titleDiv {
+    height: 100%;
+    width: fit-content;
+    padding: 2vh;
+    font-size: 5vh;
+}
+
+/* responsive section, initially in mobile then converted to deskop */
+
+.deskopOnly {
+    visibility: hidden;
+}
+
+.mobileOnly {
+    visibility: visible;
+}
+
+.dropdownNav {
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    height: 200%;
+    justify-self: flex-end;
+
+    display: flex;
+}
+
+.optionSection {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+    .deskopOnly {
+        visibility: visible;
+    }
+
+    .mobileOnly {
+        visibility: visible;
+    }
+
+    .dropdownNav {
+        position: relative;
+        height: 100%;
+
+        display: flex;
+    }
+
+    .optionSection {
+        height: 100%;
+        width: fit-content;
+    }
+}

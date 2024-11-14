@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Simply ATM</title>
+
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/index/header.css">
+    <link rel="stylesheet" href="assets/css/index/body.css">
   </head>
   <body>
-    <div id="headerDiv"></div>
+    <header id="headerDiv">
+      <div id="centerDiv">
+        <div id="iconDiv">
+          <img src="assets/images/index/icon.png">
+        </div>
+        <div id="titleDiv" class="deskopOnly">
+          SIMPLY ATM
+        </div>
+      </div>
+
+      <nav id="leftNav" class="deskopOnly">
+        <section class="optionSection">
+          <div class="optionDiv"><img class="optionImg" src="assets/images/index/signin.png"></div>
+          <div class="option">Sign In</div>
+        </section>
+        
+        <section class="optionSection">
+          <div class="optionDiv"><img class="optionImg" src="assets/images/index/signup.png"></div>
+          <div class="option">Sign Up</div>
+        </section>
+      </nav>
+
+      <div id="buttonButNotButtonSoIDontNeedToRestartAllStyling" class="mobileOnly">
+        <img src="assets/images/index/options.png">
+      </div>
+      
+      <nav id="dropdownNav">
+        <section class="optionSection">
+          <div class="optionDiv"><img class="optionImg" src="assets/images/index/signin.png"></div>
+          <div class="option">Sign In</div>
+        </section>
+        
+        <section class="optionSection">
+          <div class="optionDiv"><img class="optionImg" src="assets/images/index/signup.png"></div>
+          <div class="option">Sign Up</div>
+      </nav>
+    </header>
     <div id="bodyDiv">
-      <div id=""></div>
+      <section class="bodySections"></section>
     </div>
   </body>
 </html>
