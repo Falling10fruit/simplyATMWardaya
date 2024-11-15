@@ -1,0 +1,84 @@
+.featureSections {
+    height: 100%; /* figure it out later */
+
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.featureSections article {
+    position: relative;
+    height: fit-content;
+    background-color: var(--otherBackground);
+    letter-spacing: 2px;
+    padding: 3vw;
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+    transition: all 1s;
+
+    border-radius: 3vw;
+    box-shadow: 0px 10px 10px 5px rgba(255, 255, 255, 0.1);
+}
+
+.featureSections h1 {
+    font-size: 4.5vw;
+    margin: 0px;
+    margin-bottom: 3vw;
+}
+
+.featureSections h1 span {
+    border-bottom: 0.5vw solid var(--color);
+}
+
+.featureSections figure {
+    position: relative;
+    height: fit-content;
+    margin: 0px;
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+    transition: all 1s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.featureSections figure img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.visible {
+    transform: translateX(0) !important;
+    filter: blur(0) !important;
+    opacity: 1 !important;
+}
+
+/* responsive section */
+
+.featureSections {
+    flex-direction: column;
+    padding: 10vw;
+}
+
+.featureSections article {
+    width: 100%;
+    order: 1;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .featureSections {
+        flex-direction: row;
+        padding: 5vw;
+    }
+
+    .featureSections article {    
+        width: 35vw;
+        order: none;
+    }
+}
