@@ -5,6 +5,8 @@
     background-color: var(--backgroundColor);
     color: var(--color);
     font-weight: 900;
+    border-bottom: 0.5px solid var(--borderColor);
+    z-index: 12;
 
     display: flex;
     justify-content: center;
@@ -28,13 +30,14 @@
 
 #titleDiv {
     width: fit-content;
+    height: fit-content;
+    overflow: hidden;
     font-size: 5vh;
 }
 
 .optionSection {
     padding-right: 2vh;
     background-color: rgba(255, 255, 255, 0);
-    transition: 1s;
 
     display: flex;
     align-items: center;
@@ -110,7 +113,7 @@
     width: 100%;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1000px) {
     .deskopOnly {
         visibility: visible;
         position: relative;
@@ -135,4 +138,49 @@
         height: 100%;
         width: fit-content;
     }
+}
+
+/* title animation */
+
+#titleDiv span {
+    position: relative;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+#titleDiv span:nth-child(4n + 1) {
+    animation-name: fromUp;
+}
+
+#titleDiv span:nth-child(4n + 2) {
+    animation-name: fromRight;
+}
+
+#titleDiv span:nth-child(4n + 3) {
+    animation-name: fromBottom;
+}
+
+#titleDiv span:nth-child(4n + 4) {
+    animation-name: fromLeft;
+}
+
+@keyframes fromUp {
+    from { bottom: 100px }
+    to { bottom: 0px }
+}
+
+@keyframes fromRight {
+    from { left: 100px }
+    to { left: 0px }
+}
+
+@keyframes fromBottom {
+    from { top: 100px }
+    to { top: 0px }
+}
+
+@keyframes fromLeft {
+    from { right: 100px }
+    to { right: 0px }
 }

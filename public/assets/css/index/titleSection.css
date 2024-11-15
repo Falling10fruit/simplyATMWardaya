@@ -1,0 +1,58 @@
+#titleSection {
+    position: relative;
+    background-color: var(--otherBackground);
+    font-weight: 900;
+    font-size: 10vw;
+    text-align: center;
+}
+
+#titleSection div {
+    display: flex;
+    gap: 4vw;
+}
+
+#titleSection section {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+
+#titleChange {
+    border-bottom: 1vw solid var(--color);
+}
+
+#tileChange div {
+    position: relative;
+}
+
+.titleSVG {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 10vh;
+}
+
+.titleSVG svg {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* responsive section */
+
+#titleSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1000px) {
+    #titleSection {
+        align-items: flex-start;
+        padding-left: 5vw;
+    }
+}
