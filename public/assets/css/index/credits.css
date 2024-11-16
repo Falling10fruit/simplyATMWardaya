@@ -36,6 +36,7 @@
 
 
 #gallery {
+    align-self: flex-start;
     position: relative;
     animation-name: gallery;
     animation-duration: 10s;
@@ -45,9 +46,9 @@
 
 @keyframes gallery {
   from {
-    right: calc((min(50vh, 50vw)*8 + 3vw*7)/-2);
+    right: calc((8*min(50vh, 50vw) + 7*3vw) - 100%);
   }
   to {
-    right: 0px;
+    right: calc((8*min(50vh, 50vw) + 7*3vw)/2 - 100%);
   }
 }

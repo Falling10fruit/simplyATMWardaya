@@ -79,6 +79,6 @@
 
     .featureSections article {    
         width: 35vw;
-        order: none;
+        order: initial;
     }
 }
