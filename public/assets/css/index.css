@@ -30,6 +30,7 @@ body {
 
 .bodySections {
     height: 100%;
+    overflow: hidden;
 }
 
 .deskopOnly {

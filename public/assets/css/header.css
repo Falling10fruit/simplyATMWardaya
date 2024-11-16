@@ -71,6 +71,7 @@
 }
 
 #buttonButNotButtonSoIDontNeedToRestartAllStyling {
+    all: unset;
     position: absolute;
     height: 100%;
     aspect-ratio: 1/1;
@@ -86,6 +87,19 @@
     height: 50%;
     aspect-ratio: 1/1;
     object-fit: scale-down;
+}
+
+#buttonButNotButtonSoIDontNeedToRestartAllStyling:focus {
+    outline: revert;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#buttonButNotButtonSoIDontNeedToRestartAllStyling:focus ~ #optionsNav {
+    visibility: visible !important;
+}
+
+#optionsNav:focus-within {
+    visibility: visible !important;
 }
 
 /* responsive section, initially in mobile then converted to deskop */
@@ -106,6 +120,10 @@
     right: 0px;
     top: 100%;
     height: 200%;
+    background-color: var(--backgroundColor);
+    border-left: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColor);
+    z-index: 13;
 }
 
 .optionSection {
@@ -130,6 +148,7 @@
         right: 0px;
         height: 100%;
         visibility: visible;
+        border: none;
 
         display: flex;
     }
