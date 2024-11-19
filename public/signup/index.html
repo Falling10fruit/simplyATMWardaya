@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simply ATM</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/signup/index.css">
+  </head>
+  <body>
+    <header id="headerDiv">
+      <div id="iconDiv">
+        <img src="../assets/images/index/icon.png">
+      </div>
+
+      <div id="titleDiv" class="deskopOnly">
+        <!-- <span>S</span> don't firebase deploy yet
+        <span>I</span>
+        <span>M</span>
+        <span>P</span>
+        <span>L</span>
+        <span>Y</span>
+        <span>&nbsp;</span>
+        <span>A</span>
+        <span>T</span>
+        <span>M</span> -->
+
+        <img src="../assets/images/index/Simple ATM.png">
+      </div>
+
+      <button id="buttonButNotButtonSoIDontNeedToRestartAllStyling" class="mobileOnly">
+        <img src="../assets/images/index/options.png">
+      </button>
+      
+      <nav id="optionsNav">
+        <section class="optionSection">
+          <div class="optionIcon"><img src="../assets/images/index/signin.png"></div>
+          <div class="optionDesc">Sign In</div>
+        </section>
+        
+        <section class="optionSection">
+          <div class="optionIcon"><img src="../assets/images/index/signup.png"></div>
+          <div class="optionDesc">Sign Up</div>
+      </nav>
+    </header>
+
+    <div id="bodyDiv"> <!-- It's just a formality, and hey who knows, I might add a footer -->
+        <section class="bodySections" id="signupSection">
+            <div id="title">Sign Up</div>
+
+            <form>
+                <label for="pinInput">Input your PIN </label>
+                <input id="pinInput" type="number" maxlength="4" step="1" min="0000" placeholder="6969" autofocus>
+            </form>
+
+            <button id="submitButton" type="button">Sign Up</button>
+        </section>
+
+        <script src="../assets/js/signup/starting.js"></script>
+        <script src="../assets/js/signup/submit.js"></script>
+    </div>
+  </body>
+</html>

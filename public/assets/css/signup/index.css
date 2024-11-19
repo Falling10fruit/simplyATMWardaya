@@ -1,0 +1,76 @@
+#bodyDiv {
+    background-image: url("../../images/signup/backgroundMobile.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#signupSection {
+    position: relative;
+    padding: 5vh;
+    padding-bottom: 15vh;
+    font-size: min(5vw, 5vh);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: min(5vw, 5vh);
+}
+
+#signupSection > * {
+    transition: all 1s;
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+#title {
+    font-size: min(15vw, 15vh);
+    font-weight: 700;
+}
+
+#signupSection form {
+    height: fit-content;
+
+    display: flex;
+    align-content: center;
+    gap: min(5vw, 5vh);
+}
+
+#pinInput {
+    height: 100%;
+    width: min(20vw, 20vh);
+    padding: min(1vw, 1vh);
+    background: none;
+    border: 1px solid var(--color);
+    border-radius: min(1vw, 1vh);
+    color: var(--color);
+}
+
+#pinInput:focus {
+    outline-width: 0;
+    backdrop-filter: brightness(5%);
+}
+
+#submitButton {
+    width: min(35vh, 35vw);
+    height: min(10vh, 10vw);
+    background: none;
+    border: 1px solid var(--color);
+    border-radius: min(1vw, 1vh);
+    color: var(--color);
+    font-size: min(3vw, 3vh);
+}
+
+#submitButton:hover {
+    filter: brightness(150%) blur(0px);
+    cursor: pointer;
+}
+
+@starting-style {
+    #signupSection > * {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
