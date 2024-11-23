@@ -25,28 +25,14 @@ body {
 #title {
     font-size: 15vw;
     font-weight: initial;
-    margin-bottom: 5vh;
 }
 
-input {
-    background-color: var(--color);
-    border-radius: 10px;
-    width: 40%;
-    padding: 1vh;
-}
-
-#accountNumberInput {
-    height: 8vh;
-}
-
-#pinInput {
-    height: 5vh
-}
-
-#submitButton {
+.optionButtons {
+    width: 50%;
     padding: 1vh;
     background-color: var(--backgroundColor);
     border: 3px solid var(--color);
     border-radius: 10px;
-    box-shadow: 0px 4px 0px 1px var(--backgroundColor);
+    box-shadow: 0px 0px 0px 4px var(--backgroundColor);
+    text-align: center;
 }
