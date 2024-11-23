@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Main Menu | Simply ATM</title>
+    <title>Your balance | Simply ATM</title>
 
     <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/mainmenu/mobile.css">
+    <link rel="stylesheet" href="../assets/css/balance/mobile.css">
   </head>
   <body>
     <header id="headerDiv">
@@ -41,25 +41,24 @@
     </header>
 
     <div id="bodyDiv"> <!-- It's just a formality, and hey who knows, I might add a footer -->
-        <section class="bodySections" id="mainmenuSection">
-            <div id="title">Simple ATM</div>
+        <section class="bodySections" id="balanceSection">
+            <div id="title">Your Balance</div>
+            <div class="optionButtons" id="balanceDiv">69420</div> <!-- too badd naming conventions -->
 
-            <div class="optionButtons">Check Balance
-              <a href="../balance/"></a>
-            </div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Deposit
-              <a href="../deposit/"></a>
+            <div class="optionButtons">Done
+              <a href="../mainmenu/"></a>
             </div> <!-- whatever I'm tired-->
             <div class="optionButtons">Withdraw
               <a href="../withdraw/"></a>
             </div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Change PIN
-              <a href="../changepin/"></a>
+            <div class="optionButtons">Deposit
+              <a href="../deposit/"></a>
             </div> <!-- whatever I'm tired-->
         </section>
 
         <script src="../assets/js/heading.js"></script>
-        <script src="../assets/js/mainmenu/navOptions.js"></script>
+        <script src="../assets/js/balance/navOptions.js"></script>
+        <script src="../assets/js/balance/getBalance.js" type="module"></script>
     </div>
   </body>
 </html>

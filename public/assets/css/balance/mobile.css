@@ -7,7 +7,7 @@ body {
     --color: rgb(255, 255, 255);
 }
 
-#mainmenuSection {
+#balanceSection {
     padding: 5vh;
     padding-bottom: 15vh;
     font-family: 'Times New Roman', Times, serif;
@@ -17,13 +17,12 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 5vh;
 }
 
 #title {
-    font-size: 12vw;
+    font-size: 10vw;
     font-weight: initial;
 }
 
@@ -38,10 +37,19 @@ body {
     text-align: center;
 }
 
+.optionButtons + .optionButtons {
+    margin-top: 5vh;
+}
+
 .optionButtons a {
     position: absolute;
     left: -5px;
     top: -5px;
     width: calc(100% + 10px);
     height: calc(100% + 10px);
+}
+
+#balanceDiv {
+    margin-top: 1vh;
+    margin-bottom: 5vh;
 }
