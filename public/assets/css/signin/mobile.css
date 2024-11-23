@@ -1,13 +1,15 @@
 body {
     background-image: url("../../images/signin/background.webp");
+    backdrop-filter: brightness(0.5);
+    --backgroundColor: rgb(0, 0, 0);
+    --color: rgb(255, 255, 255);
 }
 
-#bodySections {
-    backdrop-filter: brightness(0.5);
+#signinSection {
     padding: 5vh;
     padding-bottom: 15vh;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10vw;
+    font-size: 5vw;
     font-weight: bold;
     color: var(--color);
 
@@ -21,22 +23,28 @@ body {
 #title {
     font-size: 15vw;
     font-weight: initial;
+    margin-bottom: 5vh;
 }
 
 input {
     background-color: var(--color);
     border-radius: 10px;
     width: 40%;
+    padding: 1vh;
 }
 
 #accountNumberInput {
-    height: 20vh;
+    height: 8vh;
 }
 
 #pinInput {
-    height: 10vh
+    height: 5vh
 }
 
 #submitButton {
-    height: 10vh;
+    padding: 1vh;
+    background-color: var(--backgroundColor);
+    border: 3px solid var(--color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 1px var(--backgroundColor);
 }

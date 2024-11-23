@@ -11,7 +11,7 @@
     height: fit-content;
     background-color: var(--otherBackground);
     letter-spacing: 2px;
-    padding: 3vw;
+    padding: min(10vw, 10vh);
     opacity: 0;
     transform: translateX(-100%);
     filter: blur(5px);
@@ -43,7 +43,7 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 1vw;
 }
 
