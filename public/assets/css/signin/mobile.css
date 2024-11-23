@@ -1,0 +1,42 @@
+body {
+    background-image: url("../../images/signin/background.webp");
+}
+
+#bodySections {
+    backdrop-filter: brightness(0.5);
+    padding: 5vh;
+    padding-bottom: 15vh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10vw;
+    font-weight: bold;
+    color: var(--color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3vh;
+}
+
+#title {
+    font-size: 15vw;
+    font-weight: initial;
+}
+
+input {
+    background-color: var(--color);
+    border-radius: 10px;
+    width: 40%;
+}
+
+#accountNumberInput {
+    height: 20vh;
+}
+
+#pinInput {
+    height: 10vh
+}
+
+#submitButton {
+    height: 10vh;
+}
