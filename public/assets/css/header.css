@@ -97,12 +97,12 @@
 /* responsive section, initially in mobile then converted to deskop */
 
 .deskopOnly {
-    visibility: hidden;
+    display: hidden;
     position: fixed;
 }
 
 .mobileOnly {
-    visibility: visible;
+    display: visible;
     position: relative;
 }
 
@@ -131,7 +131,7 @@
 
     .mobileOnly {
         visibility: hidden;
-        position: fixed;
+        position: fixed; /* Don't display none because the element might be display flex*/
     }
 
     #optionsNav {
@@ -146,6 +146,10 @@
 
     .optionSection {
         width: fit-content;
+    }
+
+    #buttonButNotButtonSoIDontNeedToRestartAllStyling { /* visibility doesn't work when display is set */
+        display: none;
     }
 }
 

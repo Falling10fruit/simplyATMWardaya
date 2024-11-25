@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Main Menu | Simply ATM</title>
+
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/withdraw/mobile.css">
+  </head>
+  <body>
+    <header id="headerDiv">
+      <div id="iconDiv">
+        <img src="../assets/images/index/icon.png">
+      </div>
+
+      <div id="titleDiv" class="deskopOnly">
+        <!-- <span>S</span> don't firebase deploy yet
+        <span>I</span>
+        <span>M</span>
+        <span>P</span>
+        <span>L</span>
+        <span>Y</span>
+        <span>&nbsp;</span>
+        <span>A</span>
+        <span>T</span>
+        <span>M</span> -->
+
+        <img src="../assets/images/index/Simple ATM.png">
+      </div>
+
+      <button id="buttonButNotButtonSoIDontNeedToRestartAllStyling" class="mobileOnly">
+        <img src="../assets/images/index/options.png">
+      </button>
+      
+      <nav id="optionsNav">
+        <section class="optionSection">
+          <div class="optionIcon"><img src="../assets/images/signin/homeIcon.webp"></div>
+          <div class="optionDesc">Home</div>
+        </section>
+      </nav>
+    </header>
+
+    <div id="bodyDiv"> <!-- It's just a formality, and hey who knows, I might add a footer -->
+        <section class="bodySections" id="withdrawSection">
+            <div id="title">Simple ATM</div>
+
+            <div class="optionButtons">Check Balance
+              <a href="../balance/"></a>
+            </div> <!-- whatever I'm tired-->
+            <div class="optionButtons">Deposit
+              <a href="../deposit/"></a>
+            </div> <!-- whatever I'm tired-->
+            <div class="optionButtons">Withdraw
+              <a href="../withdraw/"></a>
+            </div> <!-- whatever I'm tired-->
+            <div class="optionButtons">Change PIN
+              <a href="../changepin/"></a>
+            </div> <!-- whatever I'm tired-->
+        </section>
+
+        <script src="../assets/js/heading.js"></script>
+        <script src="../assets/js/mainmenu/navOptions.js"></script>
+    </div>
+  </body>
+</html>

@@ -6,7 +6,15 @@ menuButton.onclick = () => {
 }
 
 document.onclick = (event) => {
-    if (!menuButton.contains(event.target)) {
+    if (!menuButton.contains(event.target) && window.innerWidth < 1000) {
         optionsNav.style.visibility = "hidden";
+    }
+}
+
+window.onresize = () => {
+    if (window.innerWidth < 1000) {
+        optionsNav.style.visibility = "hidden";
+    } else {
+        optionsNav.style.visibility = "visible";
     }
 }
