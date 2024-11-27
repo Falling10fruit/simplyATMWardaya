@@ -7,3 +7,7 @@ optionsNav.children[0].onclick = () => {
 optionsNav.children[1].onclick = () => {
     window.location.href = "../signup";
 }
+
+optionsNav.children[2].onclick = () => {
+    window.location.href = "../";
+}

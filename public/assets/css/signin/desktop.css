@@ -1,8 +1,162 @@
-@font-face {
-    font-family: nickainley;
-    src: url("../../images/signin/Nickainley-Normal.otf");
+@media only screen and (min-width: 1000px) {
+    body {
+        background-image: none;
+        background-color: var(--carbackground);
+        backdrop-filter: none;
+
+        --inputcolor: #101024;
+    }
+
+    #headerDiv {
+        height: 15vh;
+        background: none;
+        border: none;
+    }
+
+    #bodyDiv {
+        padding-top: 15vh;
+        background: none;
+        font-weight: initial;
+    }
+
+    #optionsNav {
+        background: none;
+        border: none;
+        height: 100%;
+        align-items: center;
+    }
+
+    .optionSection {
+        height: 100%;
+        gap: 1vh;
+        padding-right: 10vh;
+        padding-left: 10vh;
+    }
+
+    .optionIcon {
+        height: 40%;
+    }
+
+    .optionIcon img {
+        height: 100%;
+    }
+
+    .optionDesc {
+        font-size: 5vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: initial;
+
+        position: relative;
+        top: 0.2em;
+    }
+
+    #iconDiv img {
+        height: 80%;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    #signinSection {
+        padding: 1vh;
+        gap: 3vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 5vh;
+        font-weight: initial;
+    }
+
+    #title {
+        font-size: 6vw;
+        font-weight: initial;
+        margin-bottom: 5vh;
+    }
+
+    #signinSection form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    #signinSection input {
+        height: 10vh;
+        width: 50vh;
+        padding: 2vh;
+        background-color: var(--inputcolor);
+        border: 1px solid var(--carborder);
+        border-radius: 2vh;
+        color: var(--color);
+    }
+
+    #submitButton {
+        height: 8vh;
+        width: 40vh;
+        background-color: var(--inputcolor);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 5vh;
+        text-align: center;
+        box-shadow: none;
+        border: 1px solid var(--carborder);
+    }
+
+    #signinSection .optionButtons {
+        position: fixed;
+    }
+
+    #desktopmenu {
+        margin: 2vh;
+        padding: 3vh;
+        width: 45vw;
+        flex: 1;
+        background-color: black;
+        border: 1px solid var(--carborder);
+        border-radius: 1vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 1.5vh;
+    }
+
+    #desktopmenu a {
+        text-decoration: none;
+        color: var(--color);
+        font-size: 5vh;
+        font-weight: initial;
+
+        flex: 1;
+        background-color: var(--carcolor);
+        border: 1px solid var(--carborder);
+        border-radius: 1vh;
+        transition: background-color 0.5s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+         color: transparent;
+    }
+     :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+         color: transparent;
+    }
+     ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+         color: transparent;
+    }
+     :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+         color: transparent;
+    }
+     input::placeholder {
+         color: transparent;
+    }
 }
 
-@media only screen and (min-width: 1000px) {
-
+#desktopmenu a:hover {
+    background-color: var(--carcoloraccent);
+    border-width: 3px;
 }

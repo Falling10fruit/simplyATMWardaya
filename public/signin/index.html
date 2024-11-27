@@ -6,26 +6,12 @@
 
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/signin/mobile.css">
+    <link rel="stylesheet" href="../assets/css/signin/desktop.css">
   </head>
   <body>
     <header id="headerDiv">
       <div id="iconDiv">
         <img src="../assets/images/index/icon.png">
-      </div>
-
-      <div id="titleDiv" class="deskopOnly">
-        <!-- <span>S</span> don't firebase deploy yet
-        <span>I</span>
-        <span>M</span>
-        <span>P</span>
-        <span>L</span>
-        <span>Y</span>
-        <span>&nbsp;</span>
-        <span>A</span>
-        <span>T</span>
-        <span>M</span> -->
-
-        <img src="../assets/images/index/Simple ATM.png">
       </div>
 
       <button id="buttonButNotButtonSoIDontNeedToRestartAllStyling" class="mobileOnly">
@@ -49,7 +35,7 @@
             <label for="pinInput">Input PIN</label>
             <input id="pinInput" type="number" maxlength="4" step="1" min="0000">
 
-            <div id="submitButton">SIGN IN</div> <!-- whatever I'm tired-->
+            <div id="submitButton"><span class="mobileOnly">SIGN IN</span><span class="deskopOnly">Sign In</span></div> <!-- whatever I'm tired-->
         </section>
 
         <script src="../assets/js/heading.js"></script>

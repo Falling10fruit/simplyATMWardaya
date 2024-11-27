@@ -37,7 +37,7 @@ body {
     overflow: hidden;
 }
 
-.deskopOnly {
+.deskopOnly { /* Is it misspelled? Yes. Am I gonna do anything about it? I'm too deep in it to return*/
     visibility: hidden;
     position: fixed;
 }

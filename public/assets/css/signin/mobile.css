@@ -28,19 +28,21 @@ body {
     margin-bottom: 5vh;
 }
 
-input {
-    background-color: var(--color);
-    border-radius: 10px;
-    width: 40%;
-    padding: 1vh;
-}
+@media only screen and (max-width: 1000px) {
+    input {
+        background-color: var(--color);
+        border-radius: 10px;
+        width: 40%;
+        padding: 1vh;
+    }
 
-#accountNumberInput {
-    height: 8vh;
-}
+    #accountNumberInput {
+        height: 8vh;
+    }
 
-#pinInput {
-    height: 5vh
+    #pinInput {
+        height: 5vh
+    }
 }
 
 #submitButton {
