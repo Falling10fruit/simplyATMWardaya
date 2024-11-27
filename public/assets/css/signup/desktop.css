@@ -3,6 +3,8 @@
         background-image: none;
         background-color: var(--carbackground);
         backdrop-filter: none;
+
+        --inputcolor: #101024;
     }
 
     #headerDiv {
@@ -23,6 +25,9 @@
         height: 100%;
         align-items: center;
     }
+
+    .optionSection:nth-child(1) { display: none; }
+    .optionSection:nth-child(2) { display: none; }
 
     .optionSection {
         height: 100%;
@@ -54,16 +59,42 @@
         border-radius: 50%;
     }
 
-    #mainmenuSection {
+    #signupSection {
         padding: 1vh;
-        gap: 0;
+        gap: 3vh;
+        font-family: 'Times New Roman', Times, serif;
     }
 
     #title {
         font-size: 6vw;
+        font-weight: initial;
+        margin-bottom: 10vh;
     }
 
-    #mainmenuSection .optionButtons {
+    #signupSection form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    #pinInput {
+        height: 12vh;
+        width: 50vh;
+        background-color: var(--inputcolor);
+        border: 1px solid var(--carborder);
+    }
+
+    #submitButton {
+        height: 8vh;
+        background-color: var(--inputcolor);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 5vh;
+
+        border: 1px solid var(--carborder);
+    }
+
+    #signupSection .optionButtons {
         position: fixed;
     }
 
@@ -98,6 +129,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+         color: transparent;
+    }
+     :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+         color: transparent;
+    }
+     ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+         color: transparent;
+    }
+     :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+         color: transparent;
+    }
+     input::placeholder {
+         color: transparent;
     }
 }
 
