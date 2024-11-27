@@ -1,0 +1,25 @@
+@font-face {
+    font-family: dmsans;
+    src: url("../../images/deposit/DMSans-VariableFont_opsz\,wght.ttf");
+}
+
+* {
+    box-sizing: border-box;
+
+    --fontcolor: #7796b9;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: dmsans;
+    letter-spacing: 1px;
+}
+
+figure {
+    margin: 0;
+}
+
+svg {
+    z-index: 0;
+}

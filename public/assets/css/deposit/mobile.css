@@ -1,0 +1,136 @@
+
+#header {
+    position: fixed;
+    height: 15vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4vh;
+    color: var(--fontcolor);
+    z-index: 12;
+
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+#header figure {
+    background-color: #e5b3b6;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header figure img {
+    width: 60%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+#section {
+    position: relative;
+    padding: 8vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    height: 100%;
+    width: 100%;
+    color: var(--fontcolor);
+    font-weight: bold;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#label {
+    font-size: min(5vw, 5vh);
+}
+
+#balance {
+    padding: min(2vh, 2vw);
+    padding-top: min(1vh, 1vw);
+    padding-bottom: min(1vh, 1vw);
+    background-color: #a1b2c5;
+    font-size: min(10vw, 10vh);
+    text-align: center;
+    border-radius: 2vh;
+    z-index: 4;
+}
+
+#title {
+    margin-top: min(5vh, 5vw);
+    margin-bottom: min(5vh, 5vw);
+    align-self: flex-start;
+    font-size: min(12vw, 12vh);
+}
+
+#subtext {
+    align-self: flex-start;
+    font-weight: initial;
+}
+
+#options {
+    width: 100%;
+    margin-bottom: 5vh;
+    z-index: 6;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2vw;
+}
+
+.option {
+    position: relative;
+    height: 10vh;
+    background-color: #7796b9;
+    color: #3d4547;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option:hover {
+    filter: brightness(1.25);
+}
+
+.option input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.option input:hover {
+    cursor: pointer;
+}
+
+.option:has(input:checked) {
+    filter: brightness(1.5);
+}
+
+#confirm {
+    height: min(10vh, 10vw);
+    width: min(20vh, 20vw);
+    background-color: #f7faff;
+    font-weight: initial;
+    border-radius: 2vh;
+    box-shadow: -5px 0px 0px 5px #ebeef2, 5px 0px 0px 5px #ebeef2;
+    z-index: 7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirm:hover {
+    cursor: pointer;
+    filter: brightness(0.75);
+}
