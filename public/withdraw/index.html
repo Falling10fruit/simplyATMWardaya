@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Main Menu | Simply ATM</title>
+    <title>Withdraw | Simply ATM</title>
 
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/withdraw/mobile.css">
@@ -42,24 +42,20 @@
 
     <div id="bodyDiv"> <!-- It's just a formality, and hey who knows, I might add a footer -->
         <section class="bodySections" id="withdrawSection">
-            <div id="title">Simple ATM</div>
+            <div id="title">Insert withdrawl amount</div>
 
-            <div class="optionButtons">Check Balance
-              <a href="../balance/"></a>
-            </div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Deposit
-              <a href="../deposit/"></a>
-            </div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Withdraw
-              <a href="../withdraw/"></a>
-            </div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Change PIN
-              <a href="../changepin/"></a>
+            <input type="number" class="optionButtons" id="withdrawinput">
+
+            <div class="optionButtons" style="visibility: hidden;"></div>
+            <div class="optionButtons" id="withdrawbutton">Withdraw</div> <!-- whatever I'm tired-->
+            <div class="optionButtons">Cancel
+              <a href="../mainmenu/"></a>
             </div> <!-- whatever I'm tired-->
         </section>
 
         <script src="../assets/js/heading.js"></script>
-        <script src="../assets/js/mainmenu/navOptions.js"></script>
+        <script src="../assets/js/withdraw/navOptions.js"></script>
+        <script src="../assets/js/withdraw/withdraw.js" type="module"></script>
     </div>
   </body>
 </html>

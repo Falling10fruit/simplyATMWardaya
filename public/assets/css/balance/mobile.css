@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../images/signin/background.webp");
+    background-image: url("../../images/balance/background.webp");
     background-size: cover;
     background-position: center;
     backdrop-filter: brightness(0.5);
@@ -26,27 +26,29 @@ body {
     font-weight: initial;
 }
 
-.optionButtons {
-    position: relative;
-    width: 60vw;
-    padding: 1vh;
-    background-color: var(--backgroundColor);
-    border: 5px solid var(--color);
-    border-radius: 15px;
-    box-shadow: 0px 1px 0px 5px var(--backgroundColor);
-    text-align: center;
-}
+@media only screen and (max-width: 1000px) {
+    .optionButtons {
+        position: relative;
+        width: 60vw;
+        padding: 1vh;
+        background-color: var(--backgroundColor);
+        border: 5px solid var(--color);
+        border-radius: 15px;
+        box-shadow: 0px 1px 0px 5px var(--backgroundColor);
+        text-align: center;
+    }
 
-.optionButtons + .optionButtons {
-    margin-top: 5vh;
-}
+    .optionButtons + .optionButtons {
+        margin-top: 5vh;
+    }
 
-.optionButtons a {
-    position: absolute;
-    left: -5px;
-    top: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
+    .optionButtons a {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+    }
 }
 
 #balanceDiv {

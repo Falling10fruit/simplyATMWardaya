@@ -6,26 +6,12 @@
 
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/balance/mobile.css">
+    <link rel="stylesheet" href="../assets/css/balance/desktop.css">
   </head>
   <body>
     <header id="headerDiv">
       <div id="iconDiv">
         <img src="../assets/images/index/icon.png">
-      </div>
-
-      <div id="titleDiv" class="deskopOnly">
-        <!-- <span>S</span> don't firebase deploy yet
-        <span>I</span>
-        <span>M</span>
-        <span>P</span>
-        <span>L</span>
-        <span>Y</span>
-        <span>&nbsp;</span>
-        <span>A</span>
-        <span>T</span>
-        <span>M</span> -->
-
-        <img src="../assets/images/index/Simple ATM.png">
       </div>
 
       <button id="buttonButNotButtonSoIDontNeedToRestartAllStyling" class="mobileOnly">
@@ -34,7 +20,7 @@
       
       <nav id="optionsNav">
         <section class="optionSection">
-          <div class="optionIcon"><img src="../assets/images/signin/homeIcon.webp"></div>
+          <div class="optionIcon"><img src="../assets/images/balance/desktophomeicon.png"></div>
           <div class="optionDesc">Home</div>
         </section>
       </nav>
@@ -45,15 +31,21 @@
             <div id="title">Your Balance</div>
             <div class="optionButtons" id="balanceDiv">69420</div> <!-- too badd naming conventions -->
 
-            <div class="optionButtons">Done
+            <div class="optionButtons mobileOnly">Done
               <a href="../mainmenu/"></a>
             </div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Withdraw
+            <div class="optionButtons mobileOnly">Withdraw
               <a href="../withdraw/"></a>
             </div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Deposit
+            <div class="optionButtons mobileOnly">Deposit
               <a href="../deposit/"></a>
             </div> <!-- whatever I'm tired-->
+
+            <div class="deskopOnly" id="desktopmenu">
+              <a href="../mainmenu/"><div class="optionButtons">Done</div></a>
+              <a href="../withdraw/"><div class="optionButtons">Withdraw</div></a>
+              <a href="../deposit/"><div class="optionButtons">Deposit</div></a>
+            </div>
         </section>
 
         <script src="../assets/js/heading.js"></script>
