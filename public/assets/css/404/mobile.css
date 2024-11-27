@@ -1,0 +1,16 @@
+h1 {
+    font-size: min(20vw, 15vh);
+    margin: 0px;
+}
+
+#zestyah {
+    position: relative;
+    width: min(100%, 500px);
+    object-fit: contain;
+}
+
+#countdown {
+    position: fixed;
+    bottom: 5vh;
+    font-size: min(5vh, 10vw);
+}
