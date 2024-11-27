@@ -96,15 +96,6 @@
 
 /* responsive section, initially in mobile then converted to deskop */
 
-.deskopOnly {
-    display: hidden;
-    position: fixed;
-}
-
-.mobileOnly {
-    display: visible;
-    position: relative;
-}
 
 #optionsNav {
     visibility: hidden;
@@ -124,16 +115,6 @@
 }
 
 @media only screen and (min-width: 1000px) {
-    .deskopOnly {
-        visibility: visible;
-        position: relative;
-    }
-
-    .mobileOnly {
-        visibility: hidden;
-        position: fixed; /* Don't display none because the element might be display flex*/
-    }
-
     #optionsNav {
         position: absolute;
         top: 0px;

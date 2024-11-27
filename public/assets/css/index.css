@@ -5,6 +5,11 @@
     --otherBackground: rgb(35, 35, 35);
     --color: rgb(245, 245, 245);
     --borderColor: rgb(180, 180, 180);
+
+    --carbackground: #0e0e14;
+    --carcolor: rgb(4, 4, 19);
+    --carcoloraccent: #1e1c7d;
+    --carborder: #a6a6a6;
 }
 
 * {

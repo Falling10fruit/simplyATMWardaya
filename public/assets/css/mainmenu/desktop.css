@@ -1,0 +1,100 @@
+@media only screen and (min-width: 1000px) {
+    body {
+        background-image: none;
+        background-color: var(--carbackground);
+        backdrop-filter: none;
+    }
+
+    #headerDiv {
+        height: 15vh;
+        background: none;
+        border: none;
+    }
+
+    #bodyDiv {
+        padding-top: 15vh;
+        background: none;
+        font-weight: initial;
+    }
+
+    #optionsNav {
+        background: none;
+        border: none;
+        height: 100%;
+        align-items: center;
+    }
+
+    .optionSection {
+        height: 40%;
+        gap: 1vh;
+        padding-right: 10vh;
+    }
+
+    .optionIcon {
+        height: 100%;
+    }
+
+    .optionIcon img {
+        height: 100%;
+    }
+
+    .optionDesc {
+        font-size: 5vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: initial;
+
+        position: relative;
+        top: 0.2em;
+    }
+
+    #iconDiv img {
+        height: 80%;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    #mainmenuSection {
+        padding: 1vh;
+        gap: 0;
+    }
+
+    #title {
+        font-size: 6vw;
+    }
+
+    #mainmenuSection .optionButtons {
+        position: fixed;
+    }
+
+    #desktopmenu {
+        margin: 2vh;
+        padding: 3vh;
+        width: 45vw;
+        flex: 1;
+        background-color: black;
+        border: 1px solid var(--carborder);
+        border-radius: 1vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 1.5vh;
+    }
+
+    #desktopmenu a {
+        text-decoration: none;
+        color: var(--color);
+        font-size: 5vh;
+        font-weight: initial;
+
+        flex: 1;
+        background-color: var(--carcolor);
+        border: 1px solid var(--carborder);
+        border-radius: 1vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
