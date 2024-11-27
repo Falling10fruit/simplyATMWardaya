@@ -18,9 +18,12 @@ const accountNumber = parseInt(localStorage.getItem("accountNumber"));
 const accountref = doc(db, "userInfo", "account" + accountNumber);
 const accountdoc = await getDoc(accountref);
 
+const buttons = document.getElementsByClassName("withdrawbutton");
+console.log(buttons)
 
-document.getElementById("withdrawbutton").onclick = () => {
+const handler = () => {
     const amount = parseFloat(document.getElementById("withdrawinput").value);
+    console.log(amount)
 
     if (amount < 0) {
         console.error("input must be positive");
@@ -35,6 +38,10 @@ document.getElementById("withdrawbutton").onclick = () => {
     updateDoc(accountref, {
         balance: increment(-amount)
     }).then(() => {
-        document.getElementById("withdrawinput").value = "";
+        window.location.href = "../mainmenu/";
     });
+}
+
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = handler;
 }

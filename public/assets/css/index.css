@@ -40,6 +40,8 @@ body {
 .deskopOnly { /* Is it misspelled? Yes. Am I gonna do anything about it? I'm too deep in it to return*/
     visibility: hidden;
     position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .mobileOnly {

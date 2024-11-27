@@ -1,0 +1,189 @@
+@media only screen and (min-width: 1000px) {
+    body {
+        background-image: none;
+        background-color: #0a0a0e;
+        backdrop-filter: none;
+
+        --inputcolor: #101024;
+        --carcolor: #0c0c19;
+    }
+
+    #headerDiv {
+        height: 15vh;
+        background: none;
+        border: none;
+    }
+
+    #bodyDiv {
+        padding-top: 15vh;
+        background: none;
+        font-weight: initial;
+    }
+
+    #optionsNav {
+        background: none;
+        border: none;
+        height: 100%;
+        align-items: center;
+    }
+
+    .optionSection {
+        height: 100%;
+        gap: 1vh;
+        padding-right: 10vh;
+        padding-left: 10vh;
+    }
+
+    .optionIcon {
+        height: 40%;
+    }
+
+    .optionIcon img {
+        height: 100%;
+    }
+
+    .optionDesc {
+        font-size: 5vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: initial;
+
+        position: relative;
+        top: 0.2em;
+    }
+
+    #iconDiv img {
+        height: 80%;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    #withdrawSection {
+        padding: 1vh;
+        gap: 3vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 5vh;
+        font-weight: initial;
+    }
+
+    #title {
+        font-size: 6vw;
+        font-weight: initial;
+    }
+
+    #withdrawinput {
+        width: 40vw;
+        margin-bottom: 10vh;
+    }
+
+    #balanceDiv {
+        width: 40vw;
+        height: 10vh;
+        background-color: var(--inputcolor);
+        border: 1px solid var(--carborder);
+        border-radius: 2vh;
+        color: var(--color);
+        font-size: 5vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #withdrawSection form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    #withdrawSection input {
+        height: 10vh;
+        padding: 2vh;
+        background-color: var(--inputcolor);
+        border: 1px solid var(--carborder);
+        border-radius: 2vh;
+        color: var(--color);
+    }
+
+    .optionButtons.mobileOnly {
+        display: none;
+        position: fixed;
+        left: 100%;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    #desktopmenu {
+        margin: 2vh;
+        padding: 2vh;
+        width: 40vw;
+        height: fit-content;
+        background-color: black;
+        border: 1px solid var(--carborder);
+        border-radius: 1vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 1.5vh;
+    }
+
+    #desktopmenu a {
+        text-decoration: none;
+        color: var(--color);
+        font-size: 5vh;
+        font-weight: initial;
+
+        height: 12vh;
+        background-color: var(--carcolor);
+        border: 1px solid var(--carborder);
+        border-radius: 1vh;
+        transition: background-color 0.5s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        text-align: center;
+         color: var(--color);
+    }
+     :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        text-align: center;
+         color: var(--color);
+    }
+     ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        text-align: center;
+         color: var(--color);
+    }
+     :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        text-align: center;
+         color: var(--color);
+    }
+     input::placeholder {
+        text-align: center;
+         color: var(--color);
+     }
+}
+
+#desktopmenu a:hover {
+    cursor: pointer;
+    background-color: var(--carcoloraccent);
+    border-width: 3px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #desktopmenu {
+        display: none;
+    }
+
+    span.desktopOnly {
+        left: 0;
+    }
+}

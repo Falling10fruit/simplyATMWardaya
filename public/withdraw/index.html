@@ -6,26 +6,12 @@
 
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/withdraw/mobile.css">
+    <link rel="stylesheet" href="../assets/css/withdraw/desktop.css">
   </head>
   <body>
     <header id="headerDiv">
       <div id="iconDiv">
         <img src="../assets/images/index/icon.png">
-      </div>
-
-      <div id="titleDiv" class="deskopOnly">
-        <!-- <span>S</span> don't firebase deploy yet
-        <span>I</span>
-        <span>M</span>
-        <span>P</span>
-        <span>L</span>
-        <span>Y</span>
-        <span>&nbsp;</span>
-        <span>A</span>
-        <span>T</span>
-        <span>M</span> -->
-
-        <img src="../assets/images/index/Simple ATM.png">
       </div>
 
       <button id="buttonButNotButtonSoIDontNeedToRestartAllStyling" class="mobileOnly">
@@ -34,7 +20,7 @@
       
       <nav id="optionsNav">
         <section class="optionSection">
-          <div class="optionIcon"><img src="../assets/images/signin/homeIcon.webp"></div>
+          <div class="optionIcon"><img src="../assets/images/withdraw/desktophomeicon.png"></div>
           <div class="optionDesc">Home</div>
         </section>
       </nav>
@@ -42,15 +28,23 @@
 
     <div id="bodyDiv"> <!-- It's just a formality, and hey who knows, I might add a footer -->
         <section class="bodySections" id="withdrawSection">
-            <div id="title">Insert withdrawl amount</div>
+            <div id="title">
+              <span class="mobileOnly">Insert withdrawl amount</span>
+              <span class="deskopOnly">Insert Amount</span>
+            </div>
 
-            <input type="number" class="optionButtons" id="withdrawinput">
+            <input type="number" class="optionButtons" id="withdrawinput" placeholder="-">
 
-            <div class="optionButtons" style="visibility: hidden;"></div>
-            <div class="optionButtons" id="withdrawbutton">Withdraw</div> <!-- whatever I'm tired-->
-            <div class="optionButtons">Cancel
+            <div class="optionButtons mobileOnly" style="visibility: hidden;"></div>
+            <div class="optionButtons mobileOnly" class="withdrawbutton">Withdraw</div> <!-- whatever I'm tired-->
+            <div class="optionButtons mobileOnly">Cancel
               <a href="../mainmenu/"></a>
             </div> <!-- whatever I'm tired-->
+
+            <div id="desktopmenu">
+              <a class="withdrawbutton"><div class="optionButtons">Withdraw</div></a> <!-- it styles the a not div-->
+              <a href="../mainmenu/"><div class="optionButtons">Cancel</div></a>
+            </div> 
         </section>
 
         <script src="../assets/js/heading.js"></script>

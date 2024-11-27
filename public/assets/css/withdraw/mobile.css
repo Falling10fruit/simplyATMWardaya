@@ -27,38 +27,35 @@ body {
     font-weight: initial;
 }
 
-.optionButtons {
-    position: relative;
-    width: 60vw;
-    height: 9vh;
-    padding: 1vh;
-    background-color: var(--backgroundColor);
-    border: 5px solid var(--color);
-    border-radius: 15px;
-    box-shadow: 0px 1px 0px 5px var(--backgroundColor);
+@media only screen and (max-width: 1000px) {
+    .optionButtons {
+        position: relative;
+        width: 60vw;
+        height: 9vh;
+        padding: 1vh;
+        background-color: var(--backgroundColor);
+        border: 5px solid var(--color);
+        border-radius: 15px;
+        box-shadow: 0px 1px 0px 5px var(--backgroundColor);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.optionButtons a {
-    position: absolute;
-    left: -5px;
-    top: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-}
+    .optionButtons a {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+    }
 
-input.optionButtons {
-    color: var(--color);
-}
+    input.optionButtons {
+        color: var(--color);
+    }
 
-.optionButtons:focus {
-    border: 5px solid var(--color);
-}
-
-.optionButtons:nth-child(1) {
-    visibility: hidden;
-    background-color: red;
+    .optionButtons:focus {
+        border: 5px solid var(--color);
+    }
 }
