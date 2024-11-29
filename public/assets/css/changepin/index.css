@@ -1,0 +1,49 @@
+@font-face {
+    font-family: nickainley;
+    src: url("../../images/changepin/Nickainley-Normal.otf");
+}
+
+* {
+    box-sizing: border-box;
+
+    --backgroundcolor: #f7faff;
+    --bordercolor: #ebeef2;
+    --fontcolor: #49688d;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 5vh;
+    background-color: #fff7ee;
+    color: var(--fontcolor);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+    border: none;
+}
+
+input:focus {
+    border: none;
+    outline: none; 
+}
+
+textarea, input { outline: none; } /* I dunno man at this Point I'm doing anything to remove it*/
