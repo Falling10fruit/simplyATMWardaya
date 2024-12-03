@@ -25,6 +25,29 @@ body {
     gap: 5vh;
 }
 
+.mobileOnly {
+    visibility: visible;
+    position: relative;
+}
+
+.desktopOnly {
+    visibility: hidden;
+    position: fixed;
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobileOnly {
+        display: none;
+        visibility: hidden;
+        position: fixed;
+    }
+
+    .desktopOnly {
+        visibility: visible;
+        position: relative; 
+    }
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
