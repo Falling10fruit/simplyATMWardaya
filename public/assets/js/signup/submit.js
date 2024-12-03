@@ -14,7 +14,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-document.getElementById("submitButton").onclick = () => {
+const invalidinput = document.getElementsByClassName("invalidinput");
+const submit = document.getElementById("submitButton");
+
+submit.onclick = () => {
+    if (invalidinput.length != 0) { invalidinput[0].remove() }
+
     const input = document.getElementById("pinInput").value;
 
     if (input.length == 4 && input%1 == 0) {
@@ -30,5 +35,31 @@ document.getElementById("submitButton").onclick = () => {
 
             window.location.href = "../mainmenu";
         });
+    } else {
+        const errormessage = document.createElement("div");
+        errormessage.setAttribute("class", "invalidinput");
+        errormessage.innerText = "PIN must be a four character long integer";
+
+        if (window.innerWidth < 1000) {
+            document.body.appendChild(errormessage);
+
+            errormessage.style.positionAnchor = "--mobile";
+            errormessage.style.positionArea = "bottom center";
+
+            window.onresize = () => {
+                if (window.innerWidth > 1000) {
+                    errormessage.remove();
+                }
+            }
+        } else {
+            document.body.appendChild(errormessage);
+
+            errormessage.style.positionAnchor = "--desktop";
+            errormessage.style.positionArea = "right center";
+
+            window.onresize = () => {
+                if (window.innerWidth < 1000) errormessage.remove();
+            }
+        }
     }
 }

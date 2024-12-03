@@ -46,6 +46,8 @@
     border: 1px solid var(--color);
     border-radius: min(1vw, 1vh);
     color: var(--color);
+
+    anchor-name: --desktop;
 }
 
 #pinInput:focus {
@@ -61,6 +63,8 @@
     border-radius: min(1vw, 1vh);
     color: var(--color);
     font-size: min(3vw, 3vh);
+
+    anchor-name: --mobile;
 }
 
 #submitButton:hover {

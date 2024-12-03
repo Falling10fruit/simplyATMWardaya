@@ -83,3 +83,10 @@ input:focus {
 }
 
 textarea, input { outline: none; } /* I dunno man at this Point I'm doing anything to remove it*/
+
+.invalidinput {
+    padding: 10px;
+    position: absolute;
+    color: red;
+    text-shadow: -1px 0px black, 1px 0px black, 0px -1px black, 0px 1px black;
+}
