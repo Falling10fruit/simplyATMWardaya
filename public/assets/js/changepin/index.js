@@ -18,8 +18,8 @@ const accountNumber = parseInt(localStorage.getItem("accountNumber"));
 const accountref = doc(db, "userInfo", "account" + accountNumber);
 
 document.getElementById("submit").onclick = () => {
-    const newpin = document.getElementById("newpin");
-    const confirm = document.getElementById("confirm");
+    const newpin = document.getElementById("newpin").value;
+    const confirm = document.getElementById("confirm").value;
 
     if (newpin%1 != 0) {
         console.error("pin must be an integer");

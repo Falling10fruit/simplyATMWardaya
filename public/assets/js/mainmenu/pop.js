@@ -1,3 +1,5 @@
+document.getElementById("title").innerText = "Your account number is " + localStorage.getItem("accountNumber");
+
 const options = document.getElementById("desktopmenu").children;
 const now = Date.now();
 
