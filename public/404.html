@@ -3,16 +3,39 @@
   <head>
     <title>Page Not Found | Simply ATM</title>
 
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/404/index.css">
     <link rel="stylesheet" href="assets/css/404/mobile.css">
+    <link rel="stylesheet" href="assets/css/404/desktop.css">
   </head>
   <body>
-    <h1>ERROR!!!!</h1>
-    <img id="zestyah" src="assets/images/404/imcookedbruh.png">
-    <h1 style="opacity: 0;">ERROR!!!!</h1>
+    <header id="headerDiv" class="desktopOnly">
+      <div id="iconDiv">
+        <img src="../assets/images/index/icon.png">
+      </div>
 
-    <p id="countdown">try again in... 5</p>
+      <button id="buttonButNotButtonSoIDontNeedToRestartAllStyling">
+        <img src="../assets/images/index/options.png">
+      </button>
+      
+      <nav id="optionsNav">
+        <section class="optionSection">
+          <div class="optionIcon"><img src="../assets/images/balance/desktophomeicon.png"></div>
+          <div class="optionDesc">Home</div>
+        </section>
+      </nav>
+    </header>
 
-    <script src="assets/js/404/index.js"></script>
+    <h1><span class="mobileOnly">ERROR!!!!</span><span class="desktopOnly">Error!!!</span></h1>
+    <img id="zestyah" class="mobileOnly" src="assets/images/404/imcookedbruh.png">
+    <div id="desktop404" class="desktopOnly">
+      <h1><span>4</span><span>0</span><span>4</span></h1>
+      <p>Page not found :(</p>
+    </div>
+    <h1 style="opacity: 0" class="mobileOnly">ERROR!!!!</h1>
+
+    <p id="countdown"><span class="mobileOnly">try again in... 5</span><span class="desktopOnly">Try again in ... 5</span></p>
+
+    <!--<script src="assets/js/404/index.js"></script>-->
   </body>
 </html>

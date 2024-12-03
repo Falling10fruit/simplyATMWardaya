@@ -1,0 +1,121 @@
+@media only screen and (min-width: 1000px) {
+    :root {
+        --black: #0e0e14;
+        --textshadowwidth: 5px;
+    }
+    
+    body {
+        padding-top: 15vh;
+        background-color: var(--black);
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+    }
+
+    h1:has(+img) {
+        font-size: min(10vw, 10vh);
+        font-weight: initial;
+    }    
+
+    #headerDiv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 15vh;
+        background: none;
+        border: none;
+    }
+
+    #optionsNav {
+        background: none;
+        border: none;
+        height: 100%;
+        align-items: center;
+    }
+
+    .optionSection {
+        height: 100%;
+        gap: 1vh;
+        padding-right: 10vh;
+        padding-left: 10vh;
+    }
+
+    .optionIcon {
+        height: 40%;
+    }
+
+    .optionIcon img {
+        height: 100%;
+    }
+
+    .optionDesc {
+        font-size: 5vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: initial;
+
+        position: relative;
+        top: 0.2em;
+    }
+
+    #iconDiv img {
+        height: 80%;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    #desktop404 {
+        flex: 1;
+        width: 50%;
+        margin-bottom: 10vh;
+        background-image: url("../../images/404/desktopcontainer.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #desktop404 h1 {
+        font-size: 10vh;
+    }
+
+    #desktop404 span {
+        padding: 0.2em;
+    }
+
+    #desktop404 span:nth-child(1) {
+        color: var(--black);    
+        text-shadow: calc(var(--textshadowwidth) * -1) 0 white, 0 var(--textshadowwidth) white, var(--textshadowwidth) 0 white, 0 calc(var(--textshadowwidth) * -1) white;
+        position: relative;
+        bottom: 1vh;
+    }
+    
+    #desktop404 span:nth-child(3) {
+        color: var(--black);    
+        text-shadow: calc(var(--textshadowwidth) * -1) 0 white, 0 var(--textshadowwidth) white, var(--textshadowwidth) 0 white, 0 calc(var(--textshadowwidth) * -1) white;
+        
+        position: relative;
+        bottom: 4vh;
+    }
+
+    #desktop404 p {
+        margin: 0;
+        font-size: min(5vw, 5vh);
+    }
+
+    #countdown {
+        position: relative;
+        margin: 0;
+        width: 35%;
+        height: 15vh;
+        background-color: #101024;
+        border: 1px solid #2c2c32;
+        border-radius: 2vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

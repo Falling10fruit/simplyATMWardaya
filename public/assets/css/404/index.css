@@ -10,12 +10,27 @@
 body {
     margin: 0;
     height: 100vh;
-    font-family: blaka;
-    background-color: #fff7ee;
-    color: #7796b9;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.mobileOnly {
+    visibility: visible;
+    position: relative;
+}
+
+.desktopOnly {
+    visibility: hidden;
+    position: fixed;
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobileOnly {
+        display: none;
+        visibility: hidden;
+        position: fixed;
+    }
+
+    .desktopOnly {
+        visibility: visible;
+        position: relative; 
+    }
 }
