@@ -1,0 +1,21 @@
+#accountNumberInput {
+    anchor-name: --accountNumberInput;
+}
+
+#pinInput {
+    anchor-name: --pinInput;
+}
+
+.invalidinput {
+    position-area: right center;
+    visibility: hidden;
+    font-size: 3vw;
+}
+
+#invalidaccountnumber {
+    position-anchor: --accountNumberInput;
+}
+
+#invalidpin {
+    position-anchor: --pinInput;
+}

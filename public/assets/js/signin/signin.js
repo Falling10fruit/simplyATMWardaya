@@ -14,43 +14,68 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+const invalidaccountnumber = document.getElementById("invalidaccountnumber");
+const invalidpin = document.getElementById("invalidpin");
+
 document.getElementById("submitButton").onclick = async () => {
+    invalidaccountnumber.style.visibility = "hidden";
+    invalidpin.style.visibility = "hidden";
     const accountNumber = document.getElementById("accountNumberInput").value;
     const pin = document.getElementById("pinInput").value;
 
     if (accountNumber%1 != 0) {
-        console.error("accountNumber%1 != 0");
-        return
+        invalidaccountnumber.innerHTML = "Must be an integer";
+        invalidaccountnumber.style.visibility = "visible";
     } 
 
     if (pin%1 != 0) {
-        console.error("pin%1 != 0");
-        return
+        invalidpin.innerHTML = "Must be an integer";
+        invalidpin.style.visibility = "visible";
     }
 
     if (accountNumber.length != 8) {
-        console.error("accountNumber.length != 8");
-        return
+        invalidaccountnumber.innerHTML = "Must be eight characters long";
+        invalidaccountnumber.style.visibility = "visible";
     }
     
     if (pin.length != 4) {
-        console.error("pin.length != 4");
-        return
+        invalidpin.innerHTML = "Must be four characters long";
+        invalidpin.style.visibility = "visible";
     }
 
     const accountDoc = await getDoc(doc(db, "userInfo", "account" + accountNumber));
 
-    if (!accountDoc.exists()) {
-        console.error("account does not exist");
-        return
+    if (!accountDoc.exists() && !isnumberinvalid()) {
+        invalidaccountnumber.innerHTML = "Account does not exist";
+        invalidaccountnumber.style.visibility = "visible";
     }
 
-    if (accountDoc.data().PIN != pin) {
-        console.error("wrong pin");
-        return
+    if (!ispininvalid() && !isnumberinvalid()) {
+        if (accountDoc.data().PIN != pin) {
+            invalidpin.innerHTML = "Pin is incorrect";
+            invalidpin.style.visibility = "visible";
+        }
     }
+
+    if (ispininvalid() || isnumberinvalid()) { return }
 
     localStorage.setItem("accountNumber", parseInt(accountNumber));
     localStorage.setItem("PIN", parseInt(pin));
     window.location.href = "../mainmenu/";
+}
+
+function ispininvalid () {
+    if  (invalidpin.style.visibility == "visible") {
+        return true
+    } else {
+        return false
+    }
+}
+
+function isnumberinvalid () {
+    if (invalidaccountnumber.style.visibility == "visible") {
+        return true
+    } else {
+        return false
+    }
 }

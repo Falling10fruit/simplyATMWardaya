@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/signin/mobile.css">
     <link rel="stylesheet" href="../assets/css/signin/desktop.css">
+    <link rel="stylesheet" href="../assets/css/signin/invalid.css">
   </head>
   <body>
     <header id="headerDiv">
@@ -32,8 +33,11 @@
 
             <label for="accountNumberInput">Account Number</label>
             <input id="accountNumberInput" type="number" maxlength="4" step="1" min="0000" autofocus>
+            <div class="invalidinput" id="invalidaccountnumber"></div>
+
             <label for="pinInput">Input PIN</label>
             <input id="pinInput" type="number" maxlength="4" step="1" min="0000">
+            <div class="invalidinput" id="invalidpin"></div>
 
             <div id="submitButton"><span class="mobileOnly">SIGN IN</span><span class="deskopOnly">Sign In</span></div> <!-- whatever I'm tired-->
         </section>
