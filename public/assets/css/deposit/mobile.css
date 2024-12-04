@@ -59,6 +59,8 @@
     font-size: min(10vw, 10vh);
     text-align: center;
     border-radius: 2vh;
+    min-width: fit-content;
+    width: min(55vh, 55vw);
     z-index: 4;
 }
 

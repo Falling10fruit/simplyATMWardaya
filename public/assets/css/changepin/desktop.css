@@ -135,9 +135,30 @@
         border: 1px solid #2c2c32;
         border-radius: 10px;
         font-size: min(4vw, 4vh);
+        cursor: pointer;
 
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    #newpin {
+        anchor-name: --newpin;
+    }
+
+    #confirm {
+        anchor-name: --confirm;
+    }
+
+    .invalidinput {
+        position-area: right center;
+    }
+
+    .invalidinput:nth-child(odd) { /* why tf does numbers not work */
+        position-anchor: --newpin;
+    }
+
+    .invalidinput:nth-child(even) {
+        position-anchor: --confirm;
     }
 }

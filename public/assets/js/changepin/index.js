@@ -17,33 +17,54 @@ const db = getFirestore(app);
 const accountNumber = parseInt(localStorage.getItem("accountNumber"));
 const accountref = doc(db, "userInfo", "account" + accountNumber);
 
+const invalidinput = document.getElementsByClassName("invalidinput");
+let isinvalid = false;
+
 document.getElementById("submit").onclick = () => {
+    invalidinput[0].style.visibility = "hidden";
+    invalidinput[1].style.visibility = "hidden";
+    isinvalid = false;
+
     const newpin = document.getElementById("newpin").value;
     const confirm = document.getElementById("confirm").value;
 
     if (newpin%1 != 0) {
-        console.error("pin must be an integer");
-        return
+        invalid("New pin must be an integer", 0);
     }
 
     if (newpin < 0) {
-        console.error("pin must be positive");
-        return
+        invalid("Pin must be positive", 0);
     }
 
     if (newpin.length != 4) {
-        console.error("pin must be four characters long");
-        return
+        invalid("Pin must be 4 characters", 0)
     }
 
     if (newpin != confirm) {
-        console.error("new pin does not match confirmation");
-        return
+        console.log("Bro you can't even repeat the four character number? thats minus aura broski");
+
+        invalid("Confirmation pin does not match", 1);
     }
+
+    if (isinvalid) { return }
 
     updateDoc(accountref, {
         "PIN": parseInt(newpin)
     }).then(() => {
         window.location.href = "../mainmenu/";
     });
+}
+
+function invalid (message, index) {
+    if (window.innerWidth < 1000) {
+        invalidinput[0].innerHTML = message;
+        invalidinput[0].style.visibility = "visible";
+        isinvalid = true;
+    } else {
+        invalidinput[0].style.positionArea = "--newpin";
+        invalidinput[1].style.positionArea = "--confirm"; // I dunno man why nth child aint working
+        invalidinput[index].innerHTML = message;
+        invalidinput[index].style.visibility = "visible";
+        isinvalid = true;
+    }
 }

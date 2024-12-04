@@ -8,7 +8,7 @@
         box-shadow: -10px 0px 0px 10px var(--bordercolor), 10px 0px 0px 10px var(--bordercolor);
         border-radius: 2vh;
         text-wrap: balance;
-        font-size: 8vw;
+        font-size: min(8vw, 8vh);
         text-align: center;
 
         display: flex;
@@ -46,12 +46,14 @@
         font-size: min(12vw, 12vh);
     }
 
-    .input {
+    input {
         width: 60vw;
         background-color: transparent;
         padding: 10px;
         padding-bottom: 15px;
         color: var(--fontcolor);
+        font-family: sans-serif;
+        font-size: min(3vw, 3vh);
         border-bottom: 1px solid var(--fontcolor);
         z-index: 12;
     }
@@ -75,12 +77,12 @@
         background-color: var(--backgroundcolor);
         border-radius: 5vh;
         box-shadow: 0px -5px 0px 5px var(--bordercolor), 0px 5px 0px 5px var(--bordercolor);
+        cursor: pointer;
+        anchor-name: --mobile;
     }
 
     #submit:hover {
         cursor: pointer;
-        filter: brightness(1.05);
-        z-index: initial;
     }
 
     #submit section {
@@ -94,5 +96,10 @@
         border-radius: 50%;
         box-shadow: 0px 0px 15px 0px black;
         z-index: -1;
+    }
+
+    .invalidinput {
+        position-anchor: --mobile;
+        position-area: bottom center;
     }
 }
