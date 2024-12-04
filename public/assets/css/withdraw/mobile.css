@@ -27,6 +27,10 @@ body {
     font-weight: initial;
 }
 
+.withdrawbutton {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
     .optionButtons {
         position: relative;

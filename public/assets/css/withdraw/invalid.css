@@ -1,0 +1,10 @@
+#withdrawinput {
+    anchor-name: --input;
+}
+
+.invalidinput {
+    position-anchor: --input;
+    position-area: bottom center;
+    visibility: hidden;
+    font-size: min(5vw, 5vh);
+}

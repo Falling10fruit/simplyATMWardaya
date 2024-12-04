@@ -19,19 +19,28 @@ const accountref = doc(db, "userInfo", "account" + accountNumber);
 const accountdoc = await getDoc(accountref);
 
 const buttons = document.getElementsByClassName("withdrawbutton");
-console.log(buttons)
+const invalid = document.getElementsByClassName("invalidinput")[0];
 
 const handler = () => {
+    invalid.style.visibility = "hidden";
     const amount = parseFloat(document.getElementById("withdrawinput").value);
-    console.log(amount)
+    
+    if (isNaN(amount)) {
+        invalid.innerHTML = "A number must be inputted";
+        invalid.style.visibility = "visible";
+    }
 
     if (amount < 0) {
-        console.error("input must be positive");
-        return
+        invalid.innerHTML = "Amount must be positive";
+        invalid.style.visibility = "visible";
     }
 
     if (amount > accountdoc.data().balance) {
-        console.error("Cannot withdraw too much");
+        invalid.innerHTML = "Insufficient balance";
+        invalid.style.visibility = "visible";
+    }
+
+    if (invalid.style.visibility == "visible") {
         return
     }
 
