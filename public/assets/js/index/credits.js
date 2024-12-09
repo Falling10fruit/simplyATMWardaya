@@ -26,7 +26,7 @@ function addContributers () {
         const figure = document.createElement("figure");
 
         const img = document.createElement("img");
-        img.setAttribute("src", "assets/images/index/" + contributers[i].name + ".jpeg");
+        img.setAttribute("src", "assets/images/index/" + contributers[i].name.toLowerCase() + ".jpeg");
         img.setAttribute("alt",contributers[i].name);
         figure.appendChild(img);
 
